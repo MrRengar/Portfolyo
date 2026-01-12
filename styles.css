@@ -1,0 +1,186 @@
+/* --- 1. SIFIRLAMA VE TEMEL AYARLAR --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient(circle at top right, #2d0138, #000000, #0a034b, #000000, #0c0909);
+    background-attachment: fixed;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* --- 2. HEADER VE OVERLAY (CAM PANEL) --- */
+.main-header {
+    width: 100%;
+    height: 350px;
+    background-image: url('img/hadercard.png');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-radius: 0 0 30px 30px;
+    overflow: hidden;
+}
+
+.header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(19px);
+    -webkit-backdrop-filter: blur(19px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.1);
+}
+
+.header-overlay h1 {
+    font-size: 4em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+.header-overlay p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1em;
+    letter-spacing: 1px;
+}
+
+/* --- 3. NAVİGASYON (HAP MENÜ) --- */
+nav {
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    padding: 10px 30px;
+    position: sticky;
+    top: 20px;
+    width: fit-content;
+    margin: -25px auto 40px; /* Header'ın üzerine biner */
+    z-index: 1000;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: #ddd;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+    position: relative;
+}
+
+nav a:hover { color: #fff; }
+
+nav a::after {
+    content: '';
+    position: absolute;
+    width: 0; height: 2px;
+    bottom: -5px; left: 0;
+    background-color: #667eea;
+    transition: width 0.3s;
+}
+
+nav a:hover::after { width: 100%; }
+
+/* --- 4. İÇERİK KONTEYNIRI VE CAM KARTLAR --- */
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.section { margin-bottom: 60px; }
+
+.section h2 {
+    color: #a29bfe;
+    text-shadow: 0 0 10px rgba(162, 155, 254, 0.4);
+    margin-bottom: 25px;
+    font-size: 2em;
+}
+
+/* Hakkımda ve İletişim Kartları */
+.about-container {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.highlight {
+    color: #a29bfe;
+    font-weight: bold;
+}
+
+/* --- 5. YETKİNLİKLER (3D LOGO EFEKTİ) --- */
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.skill-box {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 20px;
+    width: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: 0.4s;
+    cursor: default;
+}
+
+.skill-box:hover {
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 20px rgba(162, 155, 254, 0.3);
+    transform: translateY(-5px);
+}
+
+.yetenek-logo {
+    width: 70px;
+    height: auto;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skill-box:hover .yetenek-logo {
+    transform: scale(1.2) rotateY(360deg);
+}
+
+.skill-name {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #a29bfe;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: 0.4s ease;
+}
+
+.skill-box:hover .skill-name {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- 6. FOOTER --- */
+footer {
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ahmet Som | Projeler</title>
+    <link rel="stylesheet" href="projestyles.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-overlay">
+            <h1>Ahmet Som</h1>
+            <p>Geleceği Tasarlayan Geliştirici Adayı</p>
+        </div>
+    </header>
+    
+    <nav>
+        <a href="main.html">Hakkımda</a>
+        <a href="#projects">Projeler</a>
+    </nav>
+    
+<section class="section">
+    <div class="about-container"> 
+        <div class="about-text-content">
+            <h2>Hakkımda</h2>
+            <p>Metal teknolojileri geçmişinden gelen disiplin ve teknik bakış açısını, <span class="highlight">Anadolu Üniversitesi Web Tasarım ve Kodlama</span> eğitimiyle dijital dünyaya taşıyan bir geliştirici adayıyım...</p>
+        </div>
+    </div>
+</section>
+
+
+
+
+                <h2 id="projects" style="color: #a29bfe; margin-bottom: 20px; text-align: center;">Projelerim</h2>
+        <div class="projects-container">
+            
+            <div class="project-card">
+                <img src="img/MITAPPss.png" alt="Metropol Para Sayacı projesi" style="width: 200px; border-radius: 10px; margin-bottom: 10px;">
+                <h3>Metropol Para Sayacı</h3>
+                <p>Masa oyunları için dijital bankacılık çözümü.</p>
+                <button class="inspect-btn" onclick="openModal('modal1')">İncele</button>
+            </div>
+
+            <div class="project-card">
+                <img src="img/depoproje.png" alt="Depo Stok kontrol projesi" style="width: 100%; border-radius: 10px; margin-bottom: 10px;">
+                <h3>Stok kontrol uygulaması</h3>
+                <p>Ürün stokları yönetim bilgi alma uygulaması</p>
+                <button class="inspect-btn" onclick="openModal('modal-shop')">İncele</button>
+            </div>
+
+        </div> <div id="modal1" class="modal-overlay">
+            <div class="modal-content glass-card">
+                <span class="close-btn" onclick="closeModal('modal1')">&times;</span>
+                <div class="modal-grid">
+                    <div class="modal-image">
+                        <img src="img/MITAPPss.png" alt="Metropol Detay">
+                    </div>
+                    <div class="modal-text">
+                        <h2>Metropol Para Sayacı - Detaylar</h2>
+                        <div class="modal-description">
+                            <p><span class="highlight">Nasıl Çalışır?</span><br>
+                        Uygulama tamamen kullanıcı dostu bir mantıkla tasarlanmıştır. Başlangıçta her oyuncuya <br>
+                        bir bakiye atanır. Oyun boyunca yaptığın tüm harcamalar veya kazançlar, matematiksel bir <br>
+                        kesinlikle ana bakiyene yansıtılır. </p>
+
+                        <p><span class="highlight">Bu Projenin Amacı</span><br>
+                        Bu projeyi, fiziksel dünyadaki bir problemi (para hesaplama karmaşası) <br>
+                         dijital bir çözümle (mobil uygulama) çözmek için geliştirdim. Hem pratik <br>
+                         hem de modern bir oyun deneyimi sunmayı hedefledim. </p>
+                            <div class="btn-container">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="modal-shop" class="modal-overlay">
+            <div class="modal-content glass-card">
+                <span class="close-btn" onclick="closeModal('modal-shop')">&times;</span>
+                <div class="modal-grid">
+                    <div class="modal-image">
+                        <img src="img/depoproje.png" alt="Depolama Stok Kontrol Detay" style="width: 800px; height: auto;">
+                    </div>
+                    <div class="modal-text">
+                        <h2>Alışveriş Sitesi Projesi</h2>
+                        <div class="modal-description">
+                            <p><span class="highlight">Proje Sunumu: Akıllı Depo ve Stok Takip Sistemi</span><br>
+                            Bu sistem, küçük ve orta ölçekli işletmelerin depo süreçlerini dijitalleştirerek karmaşayı <br>
+                            önlemek amacıyla geliştirilmiş uçtan uca bir yönetim panelidir. Sadece veri tutmakla kalmaz, aynı zamanda <br>
+                             işletme sahibine kritik durumlarda rehberlik eder. </p><br>
+                             <p><span class="highlight">1. Verinin Görsel Gücü (Dashboard)</span><br>
+                                Panelin üst kısmındaki özet kartları, işletmenin genel sağlığını gösterir.<br>
+                                 Örneğin, şu an içeride 14.684,00₺ değerinde ürün olduğunu ve toplam 303 parça <br>
+                                 stok bulunduğunu tek bakışta görebiliyoruz. Bu, finansal planlama için kritik bir kolaylıktır.<br>
+                            </p><br>
+                            <p><span class="highlight">2. Proaktif Uyarı Sistemi (Düşük Stok Takibi)</span><br>
+                            Sistem, stok seviyelerini sürekli izler ve belirlenen eşiklerin altına düştüğünde uyarılar gönderir.<br>
+                             Örneğin, "USB Bellek 16GB" ürünü sadece 2 adet kaldığında sistem bunu vurgular. <br>
+                             Bu, stok tükenmeden önce müdahale etme şansı tanır. </p><br>
+                             <p><span class="highlight">3. Hızlı Müdahale ve Kullanıcı Deneyimi</span><br>
+                                Anlık Güncelleme: Stok değişimleri için karmaşık formlarla uğraşmaya gerek yok. <br>
+                                Ürünlerin yanındaki yeşil (+) ve turuncu (-) butonları sayesinde, fiziksel depoya <br>
+                                bir ürün girdiğinde veya çıktığında sistem saniyeler içinde güncellenir.
+                             </p><br>
+
+                            <div class="btn-container">
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<section id="contact" class="section">
+    <div class="about-container"> 
+        <h2>İletişim</h2>
+        <p>Proje teklifleri veya iş birliği için bana ulaşabilirsiniz:</p>
+        <p style="margin-top: 10px;"><strong>Email:</strong> ahmetsom704@gmail.com</p>
+    </div>
+</section>
+    
+    <footer>
+        <p style="text-align: center;">&copy; 2026 | Designed By Ahmet Som</p>
+    </footer>
+
+    <script src="projelerscript.js"></script>
+</body>
+</html>
